@@ -35,6 +35,9 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management.Automation, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.PowerShell.5.ReferenceAssemblies.1.1.0\lib\net4\System.Management.Automation.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -57,6 +60,8 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\PowerShellHelper.Form1.resources" />
+    <EmbeddedResource Include="obj\Debug\PowerShellHelper.Properties.Resources.resources" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -65,7 +70,17 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="bin\Debug\PowerShellHelper.exe.config" />
+    <None Include="bin\Debug\Scripts\TestScript.ps1" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\PowerShellHelper.csproj.CopyComplete" />
+    <None Include="obj\Debug\PowerShellHelper.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\PowerShellHelper.csproj.GenerateResource.cache" />
+    <None Include="obj\Debug\PowerShellHelper.csprojAssemblyReference.cache" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -75,11 +90,23 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Scripts\TestScript.ps1" />
+    <EmbeddedResource Include="Scripts\TestScript.ps1">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="bin\Debug\Microsoft.Management.Infrastructure.dll" />
+    <Content Include="bin\Debug\PowerShellHelper.exe" />
+    <Content Include="bin\Debug\PowerShellHelper.pdb" />
+    <Content Include="bin\Debug\System.Management.Automation.dll" />
+    <Content Include="bin\Debug\System.Management.Automation.xml" />
+    <Content Include="obj\Debug\PowerShellHelper.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\PowerShellHelper.exe" />
+    <Content Include="obj\Debug\PowerShellHelper.pdb" />
+    <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

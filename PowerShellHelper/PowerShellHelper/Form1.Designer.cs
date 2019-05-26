@@ -39,6 +39,7 @@
             this.btnRunScript.TabIndex = 0;
             this.btnRunScript.Text = "Run That Script";
             this.btnRunScript.UseVisualStyleBackColor = true;
+            this.btnRunScript.Click += new System.EventHandler(this.BtnRunScript_Click);
             // 
             // Form1
             // 

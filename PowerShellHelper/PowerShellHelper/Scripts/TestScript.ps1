@@ -1,1 +1,2 @@
-dir /p
+set-executionpolicy unrestricted -scope CurrentUser
+dir
