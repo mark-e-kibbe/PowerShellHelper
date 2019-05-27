@@ -8,5 +8,12 @@ namespace PowerShellHelper.Models
 {
     internal class PowerShellScriptRunner
     {
+        private string fileName = "";
+        public PowerShellScriptRunner(string scriptName)
+        {
+            fileName = scriptName;
+        }
+        
+        private string 
     }
 }
