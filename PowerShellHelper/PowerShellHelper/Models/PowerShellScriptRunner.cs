@@ -45,12 +45,16 @@ namespace PowerShellHelper.Models
         /// </summary>
         public void RunScript()
         {
-            //Get Powershell running with new assembly nuget pack
+            //Uses Powershell nuget pack from Microsoft, creates an instance of powershell
             using (PowerShell shell = PowerShell.Create())
             {
+                //get the script to run
                 string scriptPathToRun = getCompletePath(fileName);
+                //add the command to powershell to get content, which gets the scripts contents
                 shell.AddCommand("Get-Content").AddArgument(scriptPathToRun);
+                //Pipes the script from Get-Content and invokes it as a powershell script, allows getting around ExecutionPolicy Restricted
                 shell.AddCommand("Invoke-Expression");
+                //Runs the powershell script
                 shell.Invoke();
             }
         }
